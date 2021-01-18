@@ -14,18 +14,15 @@ void Infobook::show_startup()
 void Infobook::add_contact()
 {
 	if (this->amount == 8)
-		std::cout << "** Directory is full. **"
-	else ()
-	{
-		this->contacts[this->amount].set_informations(this->amount + 1);
+		std::cout << "** Directory is full. **\n";
+	else if (this->contacts[this->amount].set_informations(this->amount + 1))
 		this->amount++;
-	}
 }
 
 void Infobook::show_search_header()
 {
 	std::cout << "|-------------------------------------------|\n";
-	std::cout << "|  Index  |FIRST NAME| LAST NAME|  NICKNAME |\n";
+	std::cout << "|   Index  |FIRST NAME| LAST NAME| NICKNAME |\n";
 	std::cout << "|-------------------------------------------|\n";
 	for (int i = 0; i < this->amount; i++)
 		this->contacts[i].display_header();
@@ -38,7 +35,7 @@ void Infobook::show_search_header()
 ** arg2 - delimter. i.e. all the characters before '\n'
 */
 
-void Infobook:search_contact()
+void Infobook::search_contact()
 {
 	int index;
 
@@ -47,13 +44,15 @@ void Infobook:search_contact()
 	else
 	{
 		this->show_search_header();
-		std::cout << "### Which index do you want to search? ###\n"
+		std::cout << "### Which index do you want to search?(zero to cancel) ###\n";
 		if ((std::cin >> index) == 0 || index < 0 || index > this->amount)
 		{
-			std::cin.ignore(std::numeric_limits<std::streamsize>>::max(), '\n');
-			std::cout << "### INVALID INDEX ###";
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cout << "### INVALID INDEX ###\n";
 			return ;
 		}
-		this->contacts[index - 1].display();
+		if (index > 0)
+			this->contacts[index - 1].display();
 	}
 }
