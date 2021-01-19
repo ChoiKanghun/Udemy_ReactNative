@@ -29,11 +29,11 @@ Zombie *ZombieEvent::randomChump()
 	int random;
 	Zombie *z;
 
-	std::string name_list[7] = {"Empty", "sujilee", "nakim", "joockim", "Polarbear", "Olivia", "Stark"};
+	std::string name_list[7] = {"kchoi", "sujilee", "nakim", "joockim", "Polarbear", "Olivia", "Stark"};
 	srand(time(NULL)); // set new seed
-	random = rand() % 6 + 1;
+	random = rand() % 6;
 	// line 34: get random int value by seed table,
-	// line 34: random <- range from 1 to 6
+	// line 34: random <- range from 0 to 6
 	z = newZombie(name_list[random]);
 	z->announce();
 	return (z);

@@ -2,6 +2,8 @@
 #define ZOMBIEEVENT_HPP
 
 # include "Zombie.hpp"
+# include <time.h>
+# include <cstdlib>
 
 class ZombieEvent {
 public:
