@@ -38,10 +38,40 @@ FragTrap::FragTrap(std::string name)
 	std::cout << "Killing Machine readied\n";
 }
 
+FragTrap::FragTrap(const FragTrap &op)
+:	_hit_points(op._hit_points),
+	_max_hit_points(op._max_hit_points),
+	_energy_points(op._energy_points),
+	_max_energy_points(op._max_energy_points),
+	_level(op._level),
+	_name(op._name),
+	_melee_attack_damage(op._melee_attack_damage),
+	_ranged_attack_damage(op._ranged_attack_damage),
+	_armor_damage_reduction(op._armor_damage_reduction)
+
+{
+}
+
 FragTrap::~FragTrap()
 {
 	showNameHp(this->_name, this->_hit_points);
 	std::cout << "Mission Complete! Returning to base..\n";
+}
+
+FragTrap & FragTrap::operator=(const FragTrap &op)
+{
+	if (this == &op)
+		return (*this);
+	this->_hit_points = op._hit_points;
+	this->_max_hit_points = op._max_hit_points;
+	this->_energy_points = op._energy_points;
+	this->_max_energy_points = op._max_energy_points;
+	this->_level = op._level;
+	this->_name = op._name;
+	this->_melee_attack_damage = op._melee_attack_damage;
+	this->_ranged_attack_damage = op._ranged_attack_damage;
+	this->_armor_damage_reduction = op._armor_damage_reduction;
+	return (*this);
 }
 
 void FragTrap::meleeAttack(std::string const &target)

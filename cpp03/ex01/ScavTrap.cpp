@@ -38,10 +38,39 @@ ScavTrap::ScavTrap(std::string name)
 	std::cout << "Heroes never die\n";
 }
 
+ScavTrap::ScavTrap(const ScavTrap &op)
+:	_hit_points(op._hit_points),
+	_max_hit_points(op._max_hit_points),
+	_energy_points(op._energy_points),
+	_max_energy_points(op._max_energy_points),
+	_level(op._level),
+	_name(op._name),
+	_melee_attack_damage(op._melee_attack_damage),
+	_ranged_attack_damage(op._ranged_attack_damage),
+	_armor_damage_reduction(op._armor_damage_reduction)
+{
+}
+
 ScavTrap::~ScavTrap()
 {
 	overwatchHero(this->_name, this->_hit_points);
 	std::cout << "Play of the game by " << this->_name << std::endl;
+}
+
+ScavTrap & ScavTrap::operator=(const ScavTrap &op)
+{
+	if (this == &op)
+		return (*this);
+	this->_hit_points = op._hit_points;
+	this->_max_hit_points = op._max_hit_points;
+	this->_energy_points = op._energy_points;
+	this->_max_energy_points = op._max_energy_points;
+	this->_level = op._level;
+	this->_name = op._name;
+	this->_melee_attack_damage = op._melee_attack_damage;
+	this->_ranged_attack_damage = op._ranged_attack_damage;
+	this->_armor_damage_reduction = op._armor_damage_reduction;
+	return (*this);
 }
 
 void ScavTrap::meleeAttack(std::string const &target)

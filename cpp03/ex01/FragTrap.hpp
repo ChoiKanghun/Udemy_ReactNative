@@ -4,6 +4,8 @@
 #include <iostream>
 #include <time.h>
 #include <string>
+#include <iomanip>
+#include <stdlib.h>
 
 class FragTrap
 {
@@ -28,7 +30,9 @@ public:
 	FragTrap();
 	FragTrap(std::string name);
 	FragTrap(const FragTrap&);
+	FragTrap &operator=(const FragTrap& op);
 	virtual ~FragTrap();
+
 
 	void		rangedAttack(std::string const &target);
 	void		meleeAttack(std::string const &target);
