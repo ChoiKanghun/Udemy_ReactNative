@@ -1,11 +1,11 @@
-SRCS		=	whatever.cpp
+SRCS		=	main.cpp 
 OBJS		=	$(SRCS:.cpp=.o)
 
 COMPILER	=	clang++
 RM		=	rm -rf
 COMPILE_FLAG	=	-Wall -Werror -Wextra -I./
 
-NAME		=	whatever
+NAME		=	array
 
 all:		$(NAME)
 
