@@ -1,4 +1,30 @@
-# include "whatever.hpp"
+#include "whatever.hpp"
+
+template<typename T>
+void swap(T &arg1, T &arg2)
+{
+    T   temp;
+
+    temp = arg1;
+    arg1 = arg2;
+    arg2 = temp;
+}
+
+template<typename T>
+T &min(T &arg1, T &arg2)
+{
+    if (arg1 < arg2)
+        return (arg1);
+    return (arg2);
+}
+
+template<typename T>
+T &max(T &arg1, T &arg2)
+{
+    if (arg1 < arg2)
+        return (arg2);
+    return (arg1);
+}
 
 int main(void)
 {
@@ -10,11 +36,9 @@ int main(void)
 	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
 	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
 
-	std::string c = "kchoi1";
-	std::string d = "kchoi2";
+	std::string c = "chaine1";
+	std::string d = "chaine2";
 
-    std::cout << "c = " << c << ", d = " << d << std::endl;
-    std::cout << "swap c and d" << std::endl;
 	::swap(c, d);
 	std::cout << "c = " << c << ", d = " << d << std::endl;
 	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;

@@ -1,4 +1,4 @@
-SRCS		=	main.cpp
+SRCS		=	whatever.cpp
 OBJS		=	$(SRCS:.cpp=.o)
 
 COMPILER	=	clang++
