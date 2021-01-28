@@ -57,7 +57,7 @@ void	FragTrap::vaulthunter_dot_exe(std::string const & target)
 	
 	if (getEnergyPoints() < 25)
 	{
-		showNameHp(this->_name, this->_hit_points);
+		showNameHp(getName(), getHitPoints());
 		std::cout << "Not enough energy" << std::endl;
 		return;
 	}
@@ -67,31 +67,31 @@ void	FragTrap::vaulthunter_dot_exe(std::string const & target)
 
 void FragTrap::cub3dAttack(std::string const & target)
 {
-	showNameHp(this->_name, this->_hit_points);
+	showNameHp(getName(), getHitPoints());
 	std::cout << "\033]34m Hey, " << target << "! explain the principle of ray-casting!\n";
 }
 
 void FragTrap::miniRTAttack(std::string const & target)
 {
-	showNameHp(this->_name, this->_hit_points);
+	showNameHp(getName(), getHitPoints());
 	std::cout << "\033]34m Hey, " << target << "! explain the principle of ray-Tracing!\n";
 }
 
 void FragTrap::minishellAttack(std::string const &target)
 {
-	showNameHp(this->_name, this->_hit_points);
+	showNameHp(getName(), getHitPoints());
 	std::cout << "\033]34m Hey, " << target << "! make a shell that works as if it is a bash shell\n";
 }
 
 void FragTrap::printfAttack(std::string const &target)
 {
-	showNameHp(this->_name, this->_hit_points);
+	showNameHp(getName(), getHitPoints());
 	std::cout << "\033]34m Hey, " << target << "! explain what does '-.sdixXf' flags and width and precision mean in printf!\n";
 }
 
 void FragTrap::libasmAttack(std::string const &target)
 {
-	showNameHp(this->_name, this->_hit_points);
+	showNameHp(getName(), getHitPoints());
 	std::cout << "\033]34m Hey, " << target << "! explain how cmp in asm works!\n";
 }
 
