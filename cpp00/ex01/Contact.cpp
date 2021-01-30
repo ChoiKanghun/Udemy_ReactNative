@@ -23,10 +23,16 @@ Contact::Contact()
 bool Contact::set_informations(int index)
 {
 	this->index = index;
-	for (int i = FirstName; i <= Secret; i++)
+	for (int i = -1; i <= Secret; i++)
 	{
-		std::cout << "Add to " << Contact::fields_name[i] << "\n:";
-		std::cin >> this->informations[i];
+		std::string useless;
+		if (i == -1)
+		{
+			std::getline(std::cin, useless);
+			continue;
+		}
+		std::cout << "Add to " << Contact::fields_name[i] << ":";
+		std::getline(std::cin, this->informations[i]);
 	}
 	std::cout << "### CONTACT ADDED ###\n";
 	return (true);

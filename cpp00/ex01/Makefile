@@ -7,7 +7,7 @@ RM		=	rm -rf
 
 COMPILE_FLAG	=	-Wall -Werror -Wextra -I./
 
-NAME		=	megaphone
+NAME		=	infobook
 
 all:		$(NAME)
 
