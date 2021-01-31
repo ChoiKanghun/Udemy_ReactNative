@@ -6,20 +6,20 @@ ZombieEvent::ZombieEvent()
 
 ZombieEvent::ZombieEvent(std::string name, std::string type)
 {
-	this->_name = name;
+	this->setName(name);
 	this->setZombieType(type);
 }
 
 void ZombieEvent::setZombieType(std::string type)
 {
-	this->_type = type;
+	this->setType(type);
 }
 
 Zombie* ZombieEvent::newZombie(std::string name)
 {
 	Zombie *z = new Zombie();
-	z->_name = name;
-	z->_type = this->_type;
+	z->setName(name);
+	z->setType(this->getType());
 
 	return (z);
 }
@@ -38,3 +38,18 @@ Zombie *ZombieEvent::randomChump()
 	z->announce();
 	return (z);
 }
+
+std::string ZombieEvent::getName()
+{
+	return this->_name;
+}
+
+std::string ZombieEvent::getType()
+{
+	return this->_type;
+}
+
+void ZombieEvent::setName(std::string name)
+{
+	this->_name = name;
+} 

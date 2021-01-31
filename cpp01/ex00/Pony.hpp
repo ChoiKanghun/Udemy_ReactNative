@@ -5,10 +5,12 @@
 
 class Pony
 {
+private:
+	std::string _message;
 public:
 	Pony(std::string message);
-	std::string _message;
-
+	std::string getMessage();
+	void setMessage(std::string message);
 	void speech();
 };
 

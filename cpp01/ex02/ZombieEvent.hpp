@@ -10,11 +10,17 @@ public:
 	ZombieEvent();
 	ZombieEvent(std::string name, std::string type);
 	
+	std::string getName();
+	std::string getType();
+	void setName(std::string);
+	void setType(std::string);
+
 	void setZombieType(std::string type);
 	Zombie* newZombie(std::string name);
 	Zombie* randomChump();
-	std::string _name;
+	
 private:
+	std::string _name;
 	std::string _type;
 };
 
