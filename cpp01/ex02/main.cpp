@@ -8,8 +8,8 @@ int main()
 	std::cout << "\n###zombie new Zombie(); test ###\n\n";
 
 	zombie = new Zombie();
-	zombie->_name = "FirstZombie:Normal Zombie";
-	zombie->_type = "zombie type";
+	zombie->setName("FirstZombie:Normal Zombie");
+	zombie->setType("zombie type");
 	zombie->announce();
 	delete zombie;
 

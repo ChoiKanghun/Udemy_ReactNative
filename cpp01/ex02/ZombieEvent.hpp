@@ -13,7 +13,6 @@ public:
 	std::string getName();
 	std::string getType();
 	void setName(std::string);
-	void setType(std::string);
 
 	void setZombieType(std::string type);
 	Zombie* newZombie(std::string name);

@@ -12,7 +12,7 @@ ZombieEvent::ZombieEvent(std::string name, std::string type)
 
 void ZombieEvent::setZombieType(std::string type)
 {
-	this->setType(type);
+	this->_type = type;
 }
 
 Zombie* ZombieEvent::newZombie(std::string name)

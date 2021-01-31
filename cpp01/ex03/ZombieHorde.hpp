@@ -6,10 +6,14 @@
 # include <time.h>
 
 class ZombieHorde {
-public:
-	Zombie *_zombies;
+private:
 	int	numOfZombies;
-	
+	Zombie *_zombies;
+
+public:
+	void setNumOfZombies(int num);
+	int getNumOfZombies();
+
 	ZombieHorde();
 	ZombieHorde(int n);
 	void announce();
