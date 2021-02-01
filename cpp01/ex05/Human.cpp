@@ -3,7 +3,13 @@
 Human::Human()
 {
 }
-Brain Human::getBrain()
+
+void Human::setBrain(Brain & brain)
+{
+	this->_brain = &brain;
+}
+
+Brain Human::getBrain() const
 {
 		return (*this->_brain);
 }

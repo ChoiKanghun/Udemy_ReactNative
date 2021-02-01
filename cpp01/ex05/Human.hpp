@@ -7,8 +7,9 @@ class Human {
 
 public:
 	Human();
-	Brain getBrain();
+	Brain getBrain() const;
 	std::string identify();
+	void setBrain(Brain&);
 
 private:
 	Brain *_brain;

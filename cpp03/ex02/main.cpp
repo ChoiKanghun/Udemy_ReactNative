@@ -10,7 +10,7 @@ int main()
 	std::cout << std::endl;
     	
 	s1.rangedAttack("Pharah");
-    	s1.takeDamage(15);
+    s1.takeDamage(15);
    	s2.meleeAttack("Mercy");
    	s2.takeDamage(20);
    	s2.beRepaired(35);
@@ -24,8 +24,8 @@ int main()
 	
 	std::cout << std::endl;
     
-    	s1.challengeNewcomer("Soldier");
-    	s2.challengeNewcomer("Tracer");
+    s1.challengeNewcomer("Soldier");
+    s2.challengeNewcomer("Tracer");
    	s2.challengeNewcomer("Ana");
   	f1.vaulthunter_dot_exe("Scout");
 	

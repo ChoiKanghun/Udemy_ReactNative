@@ -8,12 +8,11 @@ void memoryLeak()
 	delete panther;
 	panther = 0;
 }
-
 /*
 ** remove comments to check the func
 ** valgrind --leak-check=full ./a.out
 */
 
-//int main()
-//{ memoryLeak(); }
+int main()
+{ memoryLeak(); }
 
