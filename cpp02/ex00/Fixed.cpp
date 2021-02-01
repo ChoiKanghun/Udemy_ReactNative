@@ -18,7 +18,7 @@ Fixed::~Fixed()
 	std::cout << "Destructor called\n";
 }
 
-Fixed& Fixed::operator =(const Fixed& op)
+Fixed& Fixed::operator=(const Fixed& op)
 {
 	std::cout << "Assignation operator called\n";
 	// in case of obj1 = obj1;
