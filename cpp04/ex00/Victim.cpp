@@ -21,7 +21,7 @@ Victim::Victim(const Victim& copy)
 
 Victim::~Victim()
 {
-    std::cout << "Victim " << this->_name << " died for no apparent reasons!" << std::endl;
+    std::cout << "Victim " << this->_name << " just died for no apparent reason!" << std::endl;
 }
 
 Victim & Victim::operator=(const Victim& op)

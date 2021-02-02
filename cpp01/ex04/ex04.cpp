@@ -9,7 +9,7 @@ int main()
 	// reference can't indicate NULL
 	// reference put value into itself whilest pointer indicates the address of a vairable
 	std::string &ref_str = str;
-
+// ref_str = NULL;
 	std::cout << "Using Pointer: " << *p_str << "\n";
 	std::cout << "Using Reference: " << ref_str << "\n";
 }

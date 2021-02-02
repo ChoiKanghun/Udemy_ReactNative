@@ -32,6 +32,7 @@ std::string Sed::strReplace(std::string const &line, std::string const &search, 
 
 void Sed::replace(std::string const &filename, std::string const &search, std::string const &replace)
 {
+	// 1. 파일명 2. 찾을 문자 3. 바꿀 문자 파일명.replace 
 	std::ifstream file;
 	std::ofstream output;
 	std::string line;

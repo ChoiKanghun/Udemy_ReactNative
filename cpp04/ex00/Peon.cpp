@@ -36,7 +36,7 @@ Peon & Peon::operator=(const Peon& op)
     return (*this);
 }
 
-void    Peon::getPolymorphed(void) const
+void    Peon::getPolymorphed(void) const 
 {
     std::cout << getName() << " has been tunrned into a pink Pony!" << std::endl;
 }

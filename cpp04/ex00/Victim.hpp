@@ -18,7 +18,7 @@ class Victim
 
         std::string getName(void) const;
 
-        void getPolymorphed(void) const;
+        virtual void getPolymorphed(void) const;
 };
 
 std::ostream    &operator<<(std::ostream & out, Victim & Victim);

@@ -68,7 +68,7 @@ void            Character::attack(Enemy* enemy)
         std::cout << "You tried to attack a dead." << std::endl;
     else if (this->_equiped_weapon)
     {
-        std::cout << this->_name << " attack " << enemy->getType() << " with a ";
+        std::cout << this->_name << " attacks " << enemy->getType() << " with a ";
         std::cout << this->_equiped_weapon->getName() << std::endl;
 
         enemy->takeDamage(this->_equiped_weapon->getDamage());

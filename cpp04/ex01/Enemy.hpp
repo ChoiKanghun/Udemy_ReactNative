@@ -19,7 +19,7 @@ class Enemy
         std::string     getType() const;
         int             getHP() const;
 
-        virtual void    takeDamage(int amount);
+        virtual void    takeDamage(int);
 };
 
 #endif
