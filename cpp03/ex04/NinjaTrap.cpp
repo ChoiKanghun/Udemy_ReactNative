@@ -6,8 +6,7 @@ NinjaTrap::NinjaTrap()
 :	ClapTrap(0,0,0,0,0,"",0,0,0)
 {
 	srand(time(NULL));
-    showNameHp(getName(), getHitPoints());
-	std::cout << "Ninja's ready." << std::endl;
+	std::cout << "NinjaTrap created" << std::endl;
 }
 
 
@@ -25,8 +24,7 @@ NinjaTrap::NinjaTrap(std::string name)
 	)
 {
 	srand(time(NULL));
-    showNameHp(getName(), getHitPoints());
-	std::cout << "Ninja's ready." << std::endl;
+	std::cout << "NinjaTrap created" << std::endl;
 }
 
 NinjaTrap::NinjaTrap(const NinjaTrap& op)

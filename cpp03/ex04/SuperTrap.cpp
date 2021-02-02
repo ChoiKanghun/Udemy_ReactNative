@@ -10,14 +10,14 @@ SuperTrap::SuperTrap()
 SuperTrap::SuperTrap(std::string name)
 :
     ClapTrap(
-        100,
-        10,
+        60,
+        60,
         120,
         120,
         1,
         name,
         60,
-        30,
+        20,
         5
     ),
     FragTrap(name),
