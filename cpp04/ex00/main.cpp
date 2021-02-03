@@ -11,7 +11,6 @@ int main()
     Peon        joe("Joe");
 //    Another	kchoi("kchoi");
 
-
     std::cout << robert << jim << joe;
 	//<< kchoi;
 
