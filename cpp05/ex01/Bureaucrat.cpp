@@ -56,7 +56,7 @@ void	Bureaucrat::signForm(Form & form)
 {
 	if (form.getSigned() == true)
 		std::cout << this->_name << " can't sign " 
-				<< form.getName() << " because that is already signed.\n";
+				<< form.getName() << " because that is already signed." << std::endl;
 	else
 		try
 		{
@@ -88,7 +88,7 @@ Bureaucrat::GradeTooHighException & Bureaucrat::GradeTooHighException::operator=
 }
 
 const char * Bureaucrat::GradeTooHighException::what() const throw() 
-{ return ("Grade is to high."); }
+{ return ("Grade is too high."); }
 
 // grade too low
 
@@ -106,7 +106,7 @@ Bureaucrat::GradeTooLowException & Bureaucrat::GradeTooLowException::operator=(c
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw() 
-{ return ("Grade is to low."); }
+{ return ("Grade is too low."); }
 
 // ostream
 std::ostream	&operator<<(std::ostream & out, const Bureaucrat & bureaucrat)

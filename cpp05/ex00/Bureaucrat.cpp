@@ -57,11 +57,8 @@ void	Bureaucrat::decrementGrade(void)
 // grade too high
 
 Bureaucrat::GradeTooHighException::GradeTooHighException() throw() {}
-
 Bureaucrat::GradeTooHighException::GradeTooHighException(const GradeTooHighException&) throw() {}
-
 Bureaucrat::GradeTooHighException::~GradeTooHighException() throw() {}
-
 Bureaucrat::GradeTooHighException & Bureaucrat::GradeTooHighException::operator=(const GradeTooHighException& op) throw() 
 {
 	if (this == &op)
@@ -69,17 +66,15 @@ Bureaucrat::GradeTooHighException & Bureaucrat::GradeTooHighException::operator=
 	return (*this);
 }
 
+
 const char * Bureaucrat::GradeTooHighException::what() const throw() 
-{ return ("Grade is to high."); }
+{ return ("Grade is too high."); }
 
 // grade too low
 
 Bureaucrat::GradeTooLowException::GradeTooLowException() throw() {}
-
 Bureaucrat::GradeTooLowException::GradeTooLowException(const GradeTooLowException&) throw() {}
-
 Bureaucrat::GradeTooLowException::~GradeTooLowException() throw() {}
-
 Bureaucrat::GradeTooLowException & Bureaucrat::GradeTooLowException::operator=(const GradeTooLowException& op) throw() 
 {
 	if (this == &op)
@@ -87,8 +82,10 @@ Bureaucrat::GradeTooLowException & Bureaucrat::GradeTooLowException::operator=(c
 	return (*this);
 }
 
+
+
 const char* Bureaucrat::GradeTooLowException::what() const throw() 
-{ return ("Grade is to low."); }
+{ return ("Grade is too low."); }
 
 // ostream
 std::ostream	&operator<<(std::ostream & out, const Bureaucrat & bureaucrat)

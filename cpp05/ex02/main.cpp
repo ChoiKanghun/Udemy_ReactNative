@@ -20,7 +20,7 @@ int main()
     PresidentialPardonForm* pardon = new PresidentialPardonForm("pardon");
 
     Bureaucrat* kchoi = new Bureaucrat("Kchoi", 120);
-    Bureaucrat* polarbear = new Bureaucrat("Polarbear", 33);
+    Bureaucrat* polarbear = new Bureaucrat("Polarbear", 52);
     Bureaucrat* hightempler = new Bureaucrat("HighTempler", 1);
 
     std::cout << "\n\033[31mNormal\033[0m tests : " << std::endl;

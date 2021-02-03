@@ -80,7 +80,7 @@ Form::GradeTooHighException & Form::GradeTooHighException::operator=(const Grade
 }
 
 const char* Form::GradeTooHighException::what() const throw() 
-{ return ("Grade is too high for Form."); }
+{ return ("Too High grade. Grade must be between 1~150"); }
 
 
 // too low
@@ -99,7 +99,7 @@ Form::GradeTooLowException & Form::GradeTooLowException::operator=(const GradeTo
 }
 
 const char* Form::GradeTooLowException::what() const throw()
-{ return ("Grade is too low for Form."); }
+{ return ("Too low grade. Grade must be between 1~150"); }
 
 // operator
 

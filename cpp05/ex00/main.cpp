@@ -35,13 +35,13 @@ int main()
         std::cerr << "[2] Exception : " << e.what() << std::endl;
     }
 
-    Bureaucrat* toHigh;
-    Bureaucrat* toLow;
+    Bureaucrat* tooHigh;
+    Bureaucrat* tooLow;
 
-    // Test ToHigh
+    // Test TooHigh
     try
     {
-        toHigh = new Bureaucrat("ToHigh", 0);
+        tooHigh = new Bureaucrat("TooHigh", 0);
         std::cerr << "It shouldn't be printed3 " << std::endl;
     }
     catch (std::exception & e)
@@ -51,7 +51,7 @@ int main()
     
     try
     {
-        toLow = new Bureaucrat("ToLow", 420);
+        tooLow = new Bureaucrat("TooLow", 420);
         std::cerr << " It shouldn't be printed out4 " << std::endl;
     }
     catch (std::exception & e)

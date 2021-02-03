@@ -57,7 +57,7 @@ void	Bureaucrat::signForm(Form & form)
 {
 	if (form.getSigned() == true)
 		std::cout << this->_name << " can't sign " 
-				<< form.getName() << " because that is already signed.\n";
+				<< form.getName() << " because that is already signed." << std::endl;
 	else
 		try
 		{

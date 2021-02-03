@@ -13,7 +13,7 @@ static void testForm(Bureaucrat& bureau, Form* form)
 
 static void testIntern(Intern& intern, const std::string &form_name, const std::string &target_name)
 {
-    Bureaucrat sign("kchoi", 1);
+    Bureaucrat bureau("kchoi", 1);
     Form *totest = NULL;
 
     std::cout << std::endl;
@@ -21,7 +21,7 @@ static void testIntern(Intern& intern, const std::string &form_name, const std::
 
     if (totest)
     {
-        testForm(sign, totest);
+        testForm(bureau, totest);
         delete totest;
     }
 }
@@ -35,7 +35,7 @@ int main()
     testIntern(someRandomIntern, "robotomy request", "Polarbear");
     testIntern(someRandomIntern, "shrubbery creation", "Ministry");
 
-    std::cout << std::endl << "\033[31mDoesn't exist\033[0m tests : " << std::endl;
+    std::cout << std::endl << "\033[33mDoesn't exist\033[0m tests : " << std::endl;
     testIntern(someRandomIntern, "doesn't exist", "NOP");
 
     return (0);

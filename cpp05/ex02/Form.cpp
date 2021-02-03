@@ -67,14 +67,16 @@ void			Form::beSigned(const Bureaucrat & bureaucrat)
 		throw Form::GradeTooLowException();
 }
 
-void			Form::beExecuted() const {};
+void			Form::beExecuted() const {
+	std::cout << "executed" << std::endl;
+};
 
 void			Form::execute(Bureaucrat const & executor) const
 {
 	if (!this->_signed)
 		throw std::string("the form is not signed.");
 	else if (executor.getGrade() > this->_least_exec_grade)
-		throw std::string("grade is too low.");
+		throw std::string("grade is too low to execute");
 	this->beExecuted();
 }
 
@@ -83,11 +85,8 @@ void			Form::execute(Bureaucrat const & executor) const
 // too high
 
 Form::GradeTooHighException::GradeTooHighException() throw() {}
-
 Form::GradeTooHighException::GradeTooHighException(const GradeTooHighException&) throw() {}
-
 Form::GradeTooHighException::~GradeTooHighException() throw() {}
-
 Form::GradeTooHighException & Form::GradeTooHighException::operator=(const GradeTooHighException& op) throw() 
 {
 	if (this == &op)
@@ -102,11 +101,8 @@ const char* Form::GradeTooHighException::what() const throw()
 // too low
 
 Form::GradeTooLowException::GradeTooLowException() throw() {}
-
 Form::GradeTooLowException::GradeTooLowException(const GradeTooLowException&) throw() {}
-
 Form::GradeTooLowException::~GradeTooLowException() throw() {}
-
 Form::GradeTooLowException & Form::GradeTooLowException::operator=(const GradeTooLowException& op) throw() 
 {
 	if (this == &op)
