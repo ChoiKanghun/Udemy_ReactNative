@@ -12,7 +12,7 @@ void iter(T *array, int length, void (*func)(T const &))
 }
 
 template<typename T>
-void print_out(T arg)
+void print_out(T const &arg)
 {
 	std::cout << arg << std::endl;
 }
