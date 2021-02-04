@@ -23,6 +23,7 @@ int	main(int argc, char **argv)
 	convert.toDouble(-1.0/0.0);
 	convert.toFloat(0.0/0.0);
 */
+	
 	return (0);
 }
 

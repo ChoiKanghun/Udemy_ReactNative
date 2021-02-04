@@ -16,3 +16,4 @@ void *serialize(void);
 Data *deserialize(void *raw);
 
 #endif
+
