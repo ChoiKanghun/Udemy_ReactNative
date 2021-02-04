@@ -4,9 +4,12 @@ int main()
 {
 	Array<int> r(1);
 	Array<int> r2(2);
+	// Array<int> r3(0);
 
 	try
 	{
+		// std::cout << "Array<int> r3(0)" << std::endl;
+		// std::cout << r3.len << std::endl;
         std::cout << "Array<int> r(1)" << std::endl;
         std::cout << "Array<int> r2(2)" << std::endl;
 		r[0] = 2;

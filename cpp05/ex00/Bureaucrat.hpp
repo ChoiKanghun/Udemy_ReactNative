@@ -8,7 +8,11 @@ class Bureaucrat
 {
 private:
 	std::string	_name;
-	int           	_grade;
+	int           	_grade; 
+	// 1~150
+	// 1~150 까지의 범위 <= 0 or 150 <
+	// error
+	//  
 
 public:
 	// Coplien

@@ -20,7 +20,11 @@ T &min(T &arg1, T &arg2)
 
 template<typename T>
 T &max(T &arg1, T &arg2)
-{
+{ 
+	// if (arg1 == arg2)
+	// {
+	// 	std::cout << "\nsame\n";		
+	// }
     if (arg1 < arg2)
         return (arg2);
     return (arg1);
@@ -29,7 +33,7 @@ T &max(T &arg1, T &arg2)
 int main(void)
 {
 	int a = 2;
-	int b = 3;
+	int b = 2;
 
 	::swap( a, b );
 	std::cout << "a = " << a << ", b = " << b << std::endl;
