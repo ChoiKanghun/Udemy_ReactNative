@@ -3,7 +3,7 @@ OBJS		=	$(SRCS:.cpp=.o)
 
 COMPILER	=	clang++
 RM		=	rm -rf
-COMPILE_FLAG	=	-Wall -Werror -Wextra -I./
+COMPILE_FLAG	=	-std=c++98 -Wall -Werror -Wextra -I./
 
 NAME		=	array
 

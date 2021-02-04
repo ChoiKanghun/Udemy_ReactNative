@@ -9,7 +9,7 @@ class Array
 			OutOfRange	&operator=(const OutOfRange &other);
 			OutOfRange(void);
 			~OutOfRange(void) _NOEXCEPT {};
-            OutOfRange(const OutOfRange &other);
+            OutOfRange(const OutOfRange &copy);
             
             
 			const char*	what() const throw() ;
@@ -17,20 +17,17 @@ class Array
 
 
 	public:
-		T		*array;
-		unsigned int	len;
+		    T		        *array;
+		    unsigned int	len;
 
 	public:
-				Array(void);
-
-				Array(unsigned int n);
-                
-				Array(const Array &other);
-
-				~Array(void);
+			Array(void);
+			Array(unsigned int n);        
+			Array(const Array &other);
+			~Array(void);
 
 	public:
-		T		&operator[](unsigned int index) const;
+		T	    	&operator[](unsigned int index) const;
 		Array		&operator=(const Array &other);
 
 	public:
@@ -86,9 +83,6 @@ Array<T>::Array(void)
 
 template<typename T>
 Array<T>::Array(unsigned int n)
-:
-        
-        len(n)
 {
     this->array = new T[n];
     this->len = n;
