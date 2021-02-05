@@ -35,7 +35,7 @@ unsigned int Span::getLen(void) const
 	return (this->len);
 }
 
-void Span::addNumber(int number) throw()
+void Span::addNumber(int number)
 {
 	if (this->len == 0)
 		throw (std::exception());
@@ -50,6 +50,12 @@ long long Span::shortestSpan(void)
 	long long curDiff;
 	std::vector<int>::iterator last;
 	std::vector<int>::iterator it;
+
+	if (this->array.size() <= 1)
+	{
+		std::cout << "container's size must be more than 1" << std::endl;
+		throw (std::exception());
+	}
 
 	minDiff = LLONG_MAX;
 	std::sort(this->array.begin(), this->array.end());
@@ -70,6 +76,12 @@ long long Span::longestSpan(void)
 {
 	long long max;
 	long long min;
+
+	if (this->array.size() <= 1)
+	{
+		std::cout << "container's size must be more than 1" << std::endl;
+		throw (std::exception());
+	}
 
 	max = static_cast<long long>(*std::max_element(this->array.begin(), this->array.end()));
 	min = static_cast<long long>(*std::min_element(this->array.begin(), this->array.end()));
