@@ -17,6 +17,7 @@ Span::Span(unsigned int n) : len(n)
     // reserve는 vector의 공간을 확보.
 	this->array.reserve(n);
 }
+
 Span::Span(const Span &other)
 {
 	(*this) = other;

@@ -42,21 +42,29 @@ class MutantStack : public std::stack<T>
             return (*this);
         };
 	
-        iterator begin() { return (std::stack<T>::c.begin()); }
+        iterator begin() 
+        { return (std::stack<T>::c.begin()); }
 
-        const_iterator begin() const { return (std::stack<T>::c.begin()); }
+        const_iterator begin() const 
+        { return (std::stack<T>::c.begin()); }
         
-        iterator end() { return (std::stack<T>::c.end()); }
+        iterator end() 
+        { return (std::stack<T>::c.end()); }
 
-        const_iterator end() const { return (std::stack<T>::c.end()); }
+        const_iterator end() const 
+        { return (std::stack<T>::c.end()); }
 
-        reverse_iterator rbegin() { return (std::stack<T>::c.rbegin()); }
+        reverse_iterator rbegin() 
+        { return (std::stack<T>::c.rbegin()); }
 
-        const_reverse_iterator rbegin() const { return (std::stack<T>::c.rbegin()); }
+        const_reverse_iterator rbegin() const 
+        { return (std::stack<T>::c.rbegin()); }
         
-        reverse_iterator rend() { return (std::stack<T>::c.rend()); }
+        reverse_iterator rend() 
+        { return (std::stack<T>::c.rend()); }
 
-        const_reverse_iterator rend() const { return (std::stack<T>::c.rend()); } 
+        const_reverse_iterator rend() const 
+        { return (std::stack<T>::c.rend()); } 
 
 };
 
